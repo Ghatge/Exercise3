@@ -1,10 +1,10 @@
 $(function() {
 
-    let breed = JSON.parse(localStorage["breed"]);
-    $("span.breed_name").text(breed.name);
+    let breeds = JSON.parse(localStorage["breed"]);
+    $("span.breed_name").text(breeds.name);
     $("img.breed_image")
-        .attr("src",`images/${breed.pictures.large}`)
-        .attr("alt",breed.name);
-    $("span.breed_text").text(breed.text);
-    $("span.breed_link").html(breed.link);
+        .attr("src",`images/${breeds.pictures.large}`)
+        .attr("alt",breeds.name);
+    $("span.breed_text").text(breeds.text);
+    $("span.breed_link").html(breeds.link);
 });
