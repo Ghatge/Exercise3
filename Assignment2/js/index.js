@@ -27,6 +27,6 @@ function displayCats(data) {
     $("table a").click(function(){
 
         let index = $(this).data("index");
-        localStorage["breed"] = JSON.stringify(breeds[index]);
+        localStorage["breed"] = JSON.stringify(cats[index]);
     });
 }
