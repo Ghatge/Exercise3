@@ -1,8 +1,8 @@
 $(function() {
     // load the xml file
-    $.getJSON("cat_data/cat_data.json",displaycats);
+    $.getJSON("cat_data/cat_data.json",displayCats);
 });
-function displaycats(data) {
+function displayCats(data) {
     let $table = $("<table></table>");
     $table.appendTo("main");
     let cats = data.breeds;
@@ -16,8 +16,8 @@ function displaycats(data) {
                     </a> 
                 </td> 
                 <td>
-                    <span class="cat_label">${breed.name}</span>&nbsp;&nbsp;
-                    <span class="cat_price">${breed.origin}</span><br>
+                    <span class="cat_name">${breed.name}</span>&nbsp;&nbsp;
+                    <span class="cat_origin">${breed.origin}</span><br>
                     ${breed.text}
                 </td>
             </tr>`
@@ -25,6 +25,7 @@ function displaycats(data) {
         }
     );
     $("table a").click(function(){
+
         let index = $(this).data("index");
         localStorage["breed"] = JSON.stringify(breeds[index]);
     });
